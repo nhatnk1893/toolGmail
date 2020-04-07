@@ -1,0 +1,12 @@
+C:\Users\WIN10\source\repos\Gmail\TollGmail\bin\Debug\TollGmail.exe.config
+C:\Users\WIN10\source\repos\Gmail\TollGmail\bin\Debug\TollGmail.exe
+C:\Users\WIN10\source\repos\Gmail\TollGmail\bin\Debug\TollGmail.pdb
+C:\Users\WIN10\source\repos\Gmail\TollGmail\obj\Debug\TollGmail.csprojAssemblyReference.cache
+C:\Users\WIN10\source\repos\Gmail\TollGmail\obj\Debug\TollGmail.Form1.resources
+C:\Users\WIN10\source\repos\Gmail\TollGmail\obj\Debug\TollGmail.Properties.Resources.resources
+C:\Users\WIN10\source\repos\Gmail\TollGmail\obj\Debug\TollGmail.csproj.GenerateResource.cache
+C:\Users\WIN10\source\repos\Gmail\TollGmail\obj\Debug\TollGmail.exe
+C:\Users\WIN10\source\repos\Gmail\TollGmail\obj\Debug\TollGmail.pdb
+C:\Users\WIN10\source\repos\Gmail\TollGmail\bin\Debug\Mail.dll
+C:\Users\WIN10\source\repos\Gmail\TollGmail\bin\Debug\Mail.xml
+C:\Users\WIN10\source\repos\Gmail\TollGmail\obj\Debug\TollGmail.csproj.CopyComplete
