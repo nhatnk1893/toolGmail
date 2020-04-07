@@ -10,3 +10,16 @@ C:\Users\WIN10\source\repos\Gmail\TollGmail\obj\Debug\TollGmail.pdb
 C:\Users\WIN10\source\repos\Gmail\TollGmail\bin\Debug\Mail.dll
 C:\Users\WIN10\source\repos\Gmail\TollGmail\bin\Debug\Mail.xml
 C:\Users\WIN10\source\repos\Gmail\TollGmail\obj\Debug\TollGmail.csproj.CopyComplete
+C:\Users\nk_nhat\Desktop\toolGmail\TollGmail\bin\Debug\TollGmail.exe.config
+C:\Users\nk_nhat\Desktop\toolGmail\TollGmail\bin\Debug\TollGmail.exe
+C:\Users\nk_nhat\Desktop\toolGmail\TollGmail\bin\Debug\TollGmail.pdb
+C:\Users\nk_nhat\Desktop\toolGmail\TollGmail\bin\Debug\Mail.dll
+C:\Users\nk_nhat\Desktop\toolGmail\TollGmail\bin\Debug\Mail.xml
+C:\Users\nk_nhat\Desktop\toolGmail\TollGmail\obj\Debug\TollGmail.csprojAssemblyReference.cache
+C:\Users\nk_nhat\Desktop\toolGmail\TollGmail\obj\Debug\TollGmail.Form1.resources
+C:\Users\nk_nhat\Desktop\toolGmail\TollGmail\obj\Debug\TollGmail.Properties.Resources.resources
+C:\Users\nk_nhat\Desktop\toolGmail\TollGmail\obj\Debug\TollGmail.csproj.GenerateResource.cache
+C:\Users\nk_nhat\Desktop\toolGmail\TollGmail\obj\Debug\TollGmail.csproj.CoreCompileInputs.cache
+C:\Users\nk_nhat\Desktop\toolGmail\TollGmail\obj\Debug\TollGmail.csproj.CopyComplete
+C:\Users\nk_nhat\Desktop\toolGmail\TollGmail\obj\Debug\TollGmail.exe
+C:\Users\nk_nhat\Desktop\toolGmail\TollGmail\obj\Debug\TollGmail.pdb

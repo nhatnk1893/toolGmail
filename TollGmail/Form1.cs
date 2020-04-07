@@ -17,16 +17,19 @@ namespace TollGmail
     public partial class Form1 : Form
     {
         const string path = "C:\\BaiTap\\";
+        const string fileName = "user.txt";
+        List<GmailModel> gmails = new List<GmailModel>();
         public Form1()
         {
             InitializeComponent();
             CreateFolder(path);
+            CreateFileUser(path + fileName);
             using (StreamReader reader = new StreamReader(path + "user.txt"))
             {
                 while (!reader.EndOfStream)
                 {
                     var data = reader.ReadLine();
-                    var info = data.Split(';');
+                    var info = data.Split((new char[] { ':' }));
                     user.Text = info[0];
                     password.Text = info[1];
                     user.Enabled = false;
@@ -80,6 +83,7 @@ namespace TollGmail
             var userName = user.Text;
             var passWord = password.Text;
 
+            List<GmailModel> gmailModels = new List<GmailModel>();
             var date = fromDate.ToString("MM/dd/yyyy");
 
             dataGridView1.Rows.Clear();
@@ -92,7 +96,7 @@ namespace TollGmail
                 SimpleImapQuery query = new SimpleImapQuery();
 
                 List<long> uids = new List<long>();
-                if(checkSeen == false && checkUnSeen == false)
+                if (checkSeen == false && checkUnSeen == false)
                 {
                     uids = imap.Search().Where(
                         Expression.And(
@@ -119,21 +123,27 @@ namespace TollGmail
                     );
                 }
                 var a = uids.AsEnumerable().Reverse().Take(50);
-                List<GmailModel> gmails = new List<GmailModel>();
+               
                 var date1 = fromDate.ToString("dd-MM-yyyy");
                 CreateFolder(path + date1);
                 foreach (long uid in a)
                 {
-
+                    GmailModel gmailModel = new GmailModel();
                     var eml = imap.GetMessageByUID(uid);
                     IMail mail = new MailBuilder().CreateFromEml(eml);
-                    Console.OutputEncoding = Encoding.Unicode;
-                  
+
                     foreach (MimeData attachment in mail.Attachments)
                     {
                         CreateFolder(path + date1 + "\\" + mail.From[0].Name);
                         attachment.Save(path + date1 + "\\" + mail.From[0].Name + "\\" + attachment.SafeFileName);
                     }
+
+                    gmailModel.Name = mail.From[0].Name;
+                    gmailModel.Gmail = mail.From[0].Address;
+                    gmailModel.Content = mail.Text;
+                    gmailModel.Date = Convert.ToDateTime(mail.Date);
+                    gmailModel.CountFiles = mail.Appointments.Count;
+
                     dataGridView1.Rows.Add(mail.From[0].Name, mail.Text, mail.Date, mail.Attachments.Count);
                 }
 
@@ -145,6 +155,18 @@ namespace TollGmail
             if (!Directory.Exists(path))
             {
                 Directory.CreateDirectory(path);
+            }
+        }
+        private static void CreateFileUser(string path)
+        {
+            if (!File.Exists(path))
+            {
+                using (FileStream fs = File.Create(path))
+                {
+                    // Add some information to the file.
+                    //fs.Write("");
+                }
+
             }
         }
     }
